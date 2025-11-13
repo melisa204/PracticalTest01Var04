@@ -51,8 +51,11 @@ class PracticalTest01Var04MainActivity : AppCompatActivity() {
             if (check1.isChecked)
                 allText = text1
 
-            if (check2.isChecked)
-                allText = allText + text2
+            if (check2.isChecked && !check1.isChecked)
+                allText = text2
+            else
+                if(check2.isChecked)
+                    allText = allText + text2
 
             inputThree.setText(allText.toString())
         }
